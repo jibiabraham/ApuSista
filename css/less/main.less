@@ -5,7 +5,7 @@ body {
 	overflow: hidden;
 }
 
-header {
+header, div.header {
 	margin-bottom: 0 !important;
 
 	a.btn-navbar {
@@ -27,4 +27,23 @@ header {
 	.galleria-thumbnails-container {
 		display: none;
 	}
+}
+
+footer, div.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 10;
+	.opacity(10);
+	background: #000;
+
+	>div {
+		padding: 10px;
+	}
+
+	&:hover {
+		.opacity(50);
+	}
+
+	.transition(e("all .5s"));
 }
