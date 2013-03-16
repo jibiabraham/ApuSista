@@ -20,12 +20,64 @@ header, div.header {
 	}
 }
 
+.nav-collapse ul {
+	z-index: 10;
+	height: 100%;
+	background: #000;
+}
+
 #gallery {
 	padding: 0;
 	margin: 0;
 
 	.galleria-thumbnails-container {
-		display: none;
+		/*display: none;*/
+	}
+}
+
+.contact {
+	.address {
+		color: white;
+		font-size: 11px;
+	}
+	.contact-form {
+		input[type="text"], textarea {
+			background: rgb(68, 68, 68);
+			border: 1px solid rgb(90, 90, 90);
+			color: white;
+		}
+	}
+}
+
+.apusista {
+	color: #fff;
+	font-style: italic;
+}
+
+.index {
+	z-index: 10;
+	width: 345px;
+	a {
+		padding: 150px;
+	}
+}
+
+.home {
+	>div {
+		cursor: pointer;
+		min-height: 325px;
+		.span6 {
+			position: relative;
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+			}
+		}
+	}
+	.no-margin {
+		margin: 0 !important;
 	}
 }
 
@@ -34,7 +86,7 @@ footer, div.footer {
 	bottom: 0;
 	width: 100%;
 	z-index: 10;
-	.opacity(10);
+	.opacity(50);
 	background: #000;
 
 	>div {
@@ -42,7 +94,7 @@ footer, div.footer {
 	}
 
 	&:hover {
-		.opacity(50);
+		.opacity(90);
 	}
 
 	.transition(e("all .5s"));
