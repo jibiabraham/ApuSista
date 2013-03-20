@@ -60,6 +60,15 @@ header, div.header {
 	a {
 		padding: 150px;
 	}
+    .logo {
+        position: relative;
+
+        #loader {
+            position: absolute;
+            left: 154px;
+            top: -50px;
+        }
+    }
 }
 
 .home {
@@ -102,20 +111,6 @@ footer, div.footer {
 
 
 /* Gallery css */
-.albumbar{
-    height:24px;
-    line-height:24px;
-    text-align:center;
-    position:fixed;
-    background-color:#000;
-    left:0px;
-    width:100%;
-    top:0px;
-    -moz-box-shadow:-2px 0px 4px #333;
-    -webkit-box-shadow:-2px 0px 4px #333;
-    box-shadow:-2px 0px 4px #333;
-    z-index:11;
-}
 .infobar{
     height:22px;
     line-height:22px;
@@ -132,13 +127,6 @@ footer, div.footer {
 span#description, .albumbar span{
     text-shadow:0px 0px 1px #fff;
     color:#fff;
-}
-.albumbar span a{
-    color:#aaa;
-    text-decoration:none;
-}
-.albumbar span a:hover{
-    color:#ddd;
 }
 #loading{
     display:none;
@@ -195,29 +183,6 @@ span#description, .albumbar span{
 }
 .cursorMinus{
     cursor:url("../images/minus.cur"),url("images/minus.cur"), default;
-}
-.albumSelect{
-    height:18px;
-    line-height:18px;
-    position:absolute;
-    right:5px;
-    top:2px;
-    width:120px;
-}
-.albumSelect .title{
-    color:#f0f0f0;
-    z-index:10;
-    border:1px solid #444;
-    background-color:#555;
-    background-repeat:no-repeat;
-    background-position:90% 50%;
-    cursor:pointer;
-    text-align:left;
-    text-indent:10px;
-    width:100%;   
-    position:absolute;
-    top:0px;
-    left:0px;
 }
 .down{
     background-image:url(../images/down.png);
