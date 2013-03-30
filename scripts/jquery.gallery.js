@@ -98,7 +98,7 @@ $(function(){
     else {
         return;
     }
-
+    buildControls();
 
     /*
     clicking on a thumb loads the image
@@ -182,6 +182,36 @@ $(function(){
         }
     });
 
+    /*
+    function to setup the next/prev buttons
+    */
+    function buildControls () {
+        var controls = [
+            $("<div/>", {
+                "class": "left-control",
+                click: function(){
+                    $thumb = $('#thumbsContainer img:nth-child('+parseInt(current+1)+')');
+                    if($thumb.length){
+                        ++current;
+                        loadPhoto($thumb,'cursorRight');
+                    }
+                }
+            }), 
+            $("<div/>", {
+                "class": "right-control",
+                click: function(){
+                    $thumb = $('#thumbsContainer img:nth-child('+parseInt(current-1)+')');
+                    if($thumb.length){
+                        --current;
+                        loadPhoto($thumb,'cursorLeft');
+                    }
+                }
+            })
+        ];
+
+        controls[0].insertBefore(imageWrapper);
+        controls[1].insertAfter(imageWrapper);
+    }
 
     /*
     function to build the thumbs container
